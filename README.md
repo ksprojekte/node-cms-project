@@ -7,10 +7,12 @@ Requirements for local installation:
 - Node Package Manager (e.g. npm)
 - Node.js
 
+Download zip-file and unpack. Add folder to VSC. Make sure the folder added is **the folder containing the code** and not the parent folder. (They both have the same name.)
+
 Then, on the VSC-Terminal type:
 
 ```
-npm init 
+npm install 
 npm run dev
 ```
 In the browser of your choice type:
