@@ -1,0 +1,167 @@
+/* CSS-Styling for the pages in /views/ folder
+
+/* Login Page */
+
+#login-body {
+    background: url("../images/login-background.jpg");
+}
+
+.login-container {
+    width: 25rem;
+    margin-top: 15%;
+    text-align: center;
+}
+
+#login-btn {
+    color:white;
+}
+
+/* Single Post Page */
+
+.single-post {
+    padding-top: 2rem;
+}
+
+#single-post-title {
+    overflow-wrap: break-word;
+}
+
+#single-post-date {
+    padding-top: 0.75rem;
+}
+
+#user-card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+#user-photo {
+    width: 7.5rem;
+}
+
+#user-card-link {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-right: 0px;
+    overflow-wrap: anywhere;
+}
+
+
+/* Dashboard styling */
+
+.dash-table {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+}
+
+.dash-title{
+overflow-wrap: anywhere;
+}
+
+#edit-btn {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+
+/* Index and User Pages */
+
+.user-name {
+    overflow-wrap: anywhere;
+}
+
+.nopost {
+    padding-top:5rem;
+}
+.nopost-btn{
+    margin-top:2rem;
+}
+
+
+/* Card styling */
+
+.card {
+    overflow-wrap: break-word;
+    margin-bottom: 2.5rem;
+  }
+
+#card-image {
+    margin-bottom: 1rem;
+}
+
+#card-title {
+    padding-bottom: 1.5rem;
+}
+
+#card-link {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 0px;
+}
+
+p {
+    margin: 10px 0 !important;
+}
+
+
+/* Create and Edit Post Pages */
+
+/* styling for statusbar, only works when status-div an id, not a class */
+#status-div {
+    
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+    }
+
+/* Post Create button */
+  
+.create-btn {
+    color: white !important;
+}
+
+/* Post Save & Cancel buttons */
+
+.btn-large {
+ font-size: 1.2rem;
+}
+
+.cancel {
+    color:#2196F3 !important;
+}
+
+
+/* General Layout styling */
+
+body {
+    padding-bottom: 100px;
+}
+
+/* Sticky Footer */
+
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+  }
+
+#footer-container {
+    margin-bottom: 1.25rem;
+}
+#footer-content {
+    margin:auto; width:50%
+}
+
+#footer-hr {
+    margin-bottom:0.938rem;
+}

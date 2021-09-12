@@ -1,0 +1,25 @@
+<!-- Navebar for desktop and mobile/tablet  -->
+
+<nav class="black" aria-label="Navigation Bar">
+    <div class="nav-wrapper container">
+
+        <a href="/posts" class="brand-logo center"><i class="fab fa-node fa-lg hide-on-small-only" aria-label="Node"></i>Blog</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-medium-and-down" aria-label="Mobile Menu"><i class="fas fa-hamburger"></i></a>
+
+        <ul class="right hide-on-med-and-down" aria-label="Desktop Menu">
+            <li><label title="Dashboard"><a href="/dashboard"><i class="fa fa-fw fa-user"></i></a></label></li>
+            <li><label title="Main Page"><a href="/posts"><i class="fa fa-fw fa-home"></i></a></label></li>
+            <li><label title="Logout"><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i></a></label></li>
+        </ul>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li>div class="user-view">
+      <div class="background responsive-img">
+        <img src="/images/sidenav-bird.jpg">
+      </div></li>
+            <li><a href="/dashboard"><i class="fa fa-fw fa-user"></i>Dashboard</a></li>
+            <li><a href="/posts"><i class="fa fa-fw fa-home"></i>Main Page</a></li>
+            <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+  </div>
+  </nav>

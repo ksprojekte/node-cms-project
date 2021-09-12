@@ -1,0 +1,46 @@
+<!-- User Dashboard Page -->
+
+<h3>Dashboard for</h3>
+<center><h1>{{name}}</h1></center>
+<h3>List of posts: </h3>
+{{#if posts}}
+<div class="dash-table">
+<table class="striped table" align="center">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each posts}}
+        <tr>
+            <td><a class="dash-title" href="/posts/{{slug}}">{{title}}</a></td>
+            <td><span class="dash-date">{{formatDate createdAt 'MMM D YYYY, HH:mm'}}</span></td>
+            <td><span class="dash-status">{{status}}</span></td>
+            <td><span class="dash-actions">
+                <a href="/posts/edit/{{_id}}" class="btn btn-float blue" id="edit-btn" aria-label="Edit post">
+                    <i class="fas fa-pen"></i>
+                </a>
+
+                <form action="/posts/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE" aria-label="Delete post">
+                    <button type="submit" class="btn deep-orange confirmation">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+                </span>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>
+{{else}}
+<center>
+<h4>No posts yet.</h4>
+<button class="btn-large waves-effect waves-light blue nopost-btn" aria-label="Create new post"><a class="create-btn" href="/posts/new">Create some!</a></button>
+</center>
+{{/if}}

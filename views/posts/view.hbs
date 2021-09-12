@@ -1,0 +1,29 @@
+<!-- Single Post Page -->
+
+<div class="row single-post">
+    <div class="col s12 m8">
+        <h3 id="single-post-title">{{post.title}}
+            <small>{{{editPost post.user user post._id false}}}</small>
+        </h3>
+        <div class="card post">
+            <div class="card-content">
+          <div class="card-image">
+          <img class="responsive-img" src="https://placeimg.com/400/100/nature">
+          </div>
+                <span class="card-title" id="single-post-date">{{formatDate post.createdAt 'MMM D YYYY, HH:mm'}}</span>
+                {{{post.body}}}
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4">
+        <div class="card center-align">
+            <div class="card-content">
+                <span class="card-title" id="user-card-title">{{post.user.displayName}}</span>
+                <img src="{{post.user.photo}}" class="circle responsive-img" id="user-photo">
+            </div>
+            <div class="card-action black">
+                <a id="user-card-link" href="/posts/user/{{post.user._id}}">{{post.user.givenName}}'s Posts</a>
+            </div>
+        </div>
+    </div>
+</div>

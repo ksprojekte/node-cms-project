@@ -1,0 +1,36 @@
+<!-- Lists latest published posts by all users -->
+
+<h1>Latest posts by our users</h1>
+<div class="row" aria-label="List of public posts">
+    {{#each posts}}
+    <div class="col s12 m4">
+        <div class="card hoverable">
+          <div class="card-image">
+          <img class="responsive-img" src="https://placeimg.com/300/100/nature">
+          </div>
+            <div class="card-content center-align">
+                <span class="card-title activator grey-text text-darken-4 truncate" id="card-title"><i
+                        class="fas fa-ellipsis-v right"></i>{{title}}</span>
+                <div class="chip">
+                    <img src="{{user.photo}}" alt="Nodeblog User">
+                    <a class="truncate" href="/posts/user/{{user._id}}">{{user.displayName}}</a>
+                </div>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{title}}<i
+                        class="far fa-times-circle right"></i></span>
+                        <p>{{preview}}</p>
+            </div>
+            <div class="card-action center-align black">
+                <a href="/posts/{{slug}}" class="black" id="card-link">Show Post</a>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="center-align nopost">
+        <h4>No posts to show.</h4>
+        <button class="btn-large waves-effect waves-light blue nopost-btn" aria-label="Create new post"><a class="create-btn"
+                href="/posts/new">Create some!</a></button>
+    </div>
+    {{/each}}
+</div>

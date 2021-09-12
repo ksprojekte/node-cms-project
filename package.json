@@ -1,0 +1,33 @@
+{
+  "name": "node-cms-project",
+  "version": "1.0.0",
+  "description": "Prototyp eines explorativen CMS mit Libraries/Frameworks",
+  "main": "server.js",
+  "scripts": {
+    "production": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js"
+  },
+  "author": "K. Schneider",
+  "license": "MIT",
+  "dependencies": {
+    "connect-mongodb-session": "^3.0.0",
+    "dayjs": "^1.10.6",
+    "dompurify": "^2.3.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "jsdom": "^17.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "slugify": "^1.6.0",
+    "string-strip-html": "^8.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.12"
+  }
+}
