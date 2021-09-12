@@ -17,4 +17,4 @@ In the browser of your choice type:
 
 http://localhost:3333/
 
-And log-in with a Google Account
+And login with a Google Account
