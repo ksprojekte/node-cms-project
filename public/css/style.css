@@ -3,7 +3,7 @@
 /* Login Page */
 
 #login-body {
-    background: url("../images/login-background.jpg");
+    background: black;
 }
 
 .login-container {
@@ -13,7 +13,7 @@
 }
 
 #login-btn {
-    color:white;
+    color: white;
 }
 
 /* Single Post Page */
@@ -77,10 +77,10 @@ overflow-wrap: anywhere;
 }
 
 .nopost {
-    padding-top:5rem;
+    padding-top: 5rem;
 }
 .nopost-btn{
-    margin-top:2rem;
+    margin-top: 2rem;
 }
 
 
@@ -132,7 +132,7 @@ p {
 }
 
 .cancel {
-    color:#2196F3 !important;
+    color: #2196F3 !important;
 }
 
 
@@ -159,9 +159,9 @@ body {
     margin-bottom: 1.25rem;
 }
 #footer-content {
-    margin:auto; width:50%
+    margin: auto; width: 50%
 }
 
 #footer-hr {
-    margin-bottom:0.938rem;
+    margin-bottom: 0.938rem;
 }
