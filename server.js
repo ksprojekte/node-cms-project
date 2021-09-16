@@ -71,6 +71,7 @@ const sessionSave = new SessionSave({
 let expiryDate = new Date(Date.now() + 1 * 60 * 60 * 1000)
 
 // Session & Cookie parameters 
+// sameSite attribute and secure do not work in a local installation, so they were excluded
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -79,8 +80,7 @@ app.use(session({
     saveUninitialized: false, // doesn't create a session until something is stored
     store: sessionSave,
     unset: 'destroy',
-    cookie: { httpOnly: true, sameSite: 'none', secure: false, expires: expiryDate }
-    
+    cookie: { httpOnly: true, expires: expiryDate }  
   }))
 
 // Initializes passport module
