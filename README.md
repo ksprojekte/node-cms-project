@@ -8,7 +8,7 @@ Requirements for local installation:
 - Node.js
 
 1. Download zip-file and unpack. 
-2. Add folder to VSC. Make sure the folder added is **the folder containing the code** and not the parent folder. (They both have the same name.)
+2. Add folder to VSC. Make sure the folder added is **the folder containing the code** and not the parent folder. (They both can have the same name when extracted.)
 3. Add your keys and secrets to the config/config.env file
 
 4. Then, on the VSC-Terminal type:
