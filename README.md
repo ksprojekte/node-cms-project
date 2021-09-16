@@ -7,19 +7,19 @@ Requirements for local installation:
 - Node Package Manager (e.g. npm)
 - Node.js
 
-Download zip-file and unpack. Add folder to VSC. Make sure the folder added is **the folder containing the code** and not the parent folder. (They both have the same name.)
+1. Download zip-file and unpack. 
+2. Add folder to VSC. Make sure the folder added is **the folder containing the code** and not the parent folder. (They both have the same name.)
+3. Add your keys and secrets to the config/config.env file
 
-Add your keys and secrets to the config/config.env file
-
-Then, on the VSC-Terminal type:
+4. Then, on the VSC-Terminal type:
 
 ```
 npm install 
 npm run dev
 ```
 
-In the browser of your choice type:
+5. In the browser of your choice type:
 
 http://localhost:3333/
 
-And login with a Google Account
+6. And login with a Google Account
