@@ -42,7 +42,7 @@ app.use(
   })
 )
 
-// Sets up the handlebars template engine, registers the Helpers
+// Sets the handlebars template engine, registers the Helpers
 
 app.engine(
   '.hbs',
@@ -66,46 +66,52 @@ const sessionSave = new SessionSave({
   collection:'sessions'
 })
 
-// Session parameters
+// Expiration for Cookie = 1 hour
 
-let expiryDate = new Date(Date.now() + 1 * 60 * 60 * 1000);
+let expiryDate = new Date(Date.now() + 1 * 60 * 60 * 1000)
+
+// Session & Cookie parameters 
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
     name : 'sessionId',
     resave: false, // won't save a session if nothing is modified
-    saveUninitialized: false, // don't create a session until something is stored
+    saveUninitialized: false, // doesn't create a session until something is stored
     store: sessionSave,
     unset: 'destroy',
-    cookie: { httpOnly: true, expires: expiryDate }
+    cookie: { httpOnly: true, sameSite: 'none', secure: false, expires: expiryDate }
     
   }))
 
-// Initializes passport 
+// Initializes passport module
 
 app.use(passport.initialize())
 
-// Uses passport Middleware for persistent login sessions
+// Uses passport middleware for persistent login sessions
 
 app.use(passport.session())
 
-// Sets up the global variables
+// Sets the global variables
 
 app.use(globalVariables)
 
-// Sets up the static folder
+// Sets the static folder
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-// Sets up routes, port
+// Sets routes
 
 app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/authenticate'))
 app.use('/posts', require('./routes/posts'))
 
+// For all other render 404
+
 app.use(function(req, res, next) {
   res.status(404).render('errors/404')
 })
+
+// Sets port
 
 const PORT = process.env.PORT || 3333
 
